@@ -18,7 +18,7 @@ namespace TempFolderCleaner
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //git added
+            //git added 2024. 12. 07.
         }
 
         private async void button1_Click(object sender, EventArgs e)
@@ -76,10 +76,10 @@ namespace TempFolderCleaner
             {
                 await Task.Run(() =>
                 {
-                        if (Directory.Exists(selectedfolder))
-                        {
-                            totalDeletedSize += RemoveDuplicateFiles(selectedfolder);
-                        }
+                    if (Directory.Exists(selectedfolder))
+                    {
+                        totalDeletedSize += RemoveDuplicateFiles(selectedfolder);
+                    }
                 });
             }
 
@@ -255,6 +255,19 @@ namespace TempFolderCleaner
             folderBrowserDialog1.ShowDialog();
             label1.Text = folderBrowserDialog1.SelectedPath;
             selectedfolder = folderBrowserDialog1.SelectedPath;
+        }
+
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox9.Checked)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to delete browsers cache? It may cause problems during webpage loading.", "ATTENTION!", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.No)
+                {
+                    checkBox9.Checked = false;
+                }
+            }
         }
     }
 }

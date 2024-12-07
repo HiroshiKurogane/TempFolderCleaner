@@ -203,6 +203,7 @@
             checkBox9.TabIndex = 2;
             checkBox9.Text = "Browsers Cache";
             checkBox9.UseVisualStyleBackColor = true;
+            checkBox9.CheckedChanged += checkBox9_CheckedChanged;
             // 
             // Form1
             // 
