@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using UpdateChecker;
 
 namespace TempFolderCleaner
 {
@@ -268,6 +269,11 @@ namespace TempFolderCleaner
                     checkBox9.Checked = false;
                 }
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            UpdateChecker.GitHubReleaseChecker.CheckAndDownloadLatestRelease();
         }
     }
 }
