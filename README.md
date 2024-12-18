@@ -12,7 +12,7 @@ This program is a lightweight and efficient application designed to help users c
   - Windows Error Reporting Logs
   - Visual Studio Code
   - Discord
-  - vBrowser Cache
+  - Browser Cache (Chrome)
 
 - __Quick Actions:__
   - Select all / Deselect all: Instantly select or clear all options.
