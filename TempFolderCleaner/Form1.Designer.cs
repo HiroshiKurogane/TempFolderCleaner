@@ -45,6 +45,7 @@
             folderBrowserDialog1 = new FolderBrowserDialog();
             checkBox9 = new CheckBox();
             button5 = new Button();
+            checkBox10 = new CheckBox();
             SuspendLayout();
             // 
             // button1
@@ -129,7 +130,7 @@
             // checkBox7
             // 
             checkBox7.AutoSize = true;
-            checkBox7.Location = new Point(606, 17);
+            checkBox7.Location = new Point(589, 17);
             checkBox7.Margin = new Padding(3, 2, 3, 2);
             checkBox7.Name = "checkBox7";
             checkBox7.Size = new Size(125, 19);
@@ -219,6 +220,18 @@
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
+            // checkBox10
+            // 
+            checkBox10.AutoSize = true;
+            checkBox10.Location = new Point(258, 40);
+            checkBox10.Margin = new Padding(3, 2, 3, 2);
+            checkBox10.Name = "checkBox10";
+            checkBox10.Size = new Size(155, 19);
+            checkBox10.TabIndex = 2;
+            checkBox10.Text = "Installers Temporary files";
+            checkBox10.UseVisualStyleBackColor = true;
+            checkBox10.CheckedChanged += checkBox10_CheckedChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -227,6 +240,7 @@
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(label1);
+            Controls.Add(checkBox10);
             Controls.Add(checkBox9);
             Controls.Add(checkBox8);
             Controls.Add(checkBox7);
@@ -270,5 +284,6 @@
         private FolderBrowserDialog folderBrowserDialog1;
         private CheckBox checkBox9;
         private Button button5;
+        private CheckBox checkBox10;
     }
 }

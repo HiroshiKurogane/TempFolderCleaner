@@ -69,6 +69,11 @@ namespace TempFolderCleaner
                 }).ToArray();
             }
 
+            if (checkBox10.Checked)
+            {
+                tempFolders = tempFolders.Concat(new[] { Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "Installer") }).ToArray();
+            }
+
             // Clean the temp folders
             await Task.Run(() => totalDeletedSize = CleanTempFolders(tempFolders));
 
@@ -237,6 +242,7 @@ namespace TempFolderCleaner
             checkBox7.Checked = true;
             checkBox8.Checked = true;
             checkBox9.Checked = true;
+            checkBox10.Checked = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -249,6 +255,7 @@ namespace TempFolderCleaner
             checkBox7.Checked = false;
             checkBox8.Checked = false;
             checkBox9.Checked = false;
+            checkBox10.Checked = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -267,6 +274,19 @@ namespace TempFolderCleaner
                 if (result == DialogResult.No)
                 {
                     checkBox9.Checked = false;
+                }
+            }
+        }
+
+        private void checkBox10_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox9.Checked)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to delete Installers temporary files? It may affect system stability or functionality.", "ATTENTION!", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.No)
+                {
+                    checkBox10.Checked = false;
                 }
             }
         }
