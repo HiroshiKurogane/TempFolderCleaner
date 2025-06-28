@@ -11,7 +11,7 @@ namespace UpdateChecker
     public class GitHubReleaseChecker
     {
         private const string GitHubRepoUrl = "https://api.github.com/repos/HiroshiKurogane/TempFolderCleaner/releases/latest";
-        private const string CurrentVersion = "1.0.1";  // Your current version here
+        private const string CurrentVersion = "1.0.2";  // Your current version here
         private const string CurrentExePath = "TempFolderCleaner.exe";  // Path of the current executable
         private const string TempDownloadPath = "TempFolderCleaner_New.exe"; // Temporary downloaded file
 
