@@ -280,7 +280,7 @@ namespace TempFolderCleaner
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox9.Checked)
+            if (checkBox10.Checked)
             {
                 DialogResult result = MessageBox.Show("Are you sure you want to delete Installers temporary files? It may affect system stability or functionality.", "ATTENTION!", MessageBoxButtons.YesNo);
 
