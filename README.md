@@ -24,8 +24,8 @@ This program is a lightweight and efficient application designed to help users c
 
 One-click "Clean Temp Folders" button simplifies the process.
 A detailed summary of the cleanup operation, including the total space freed, is displayed upon completion.
-Additional Features:
 
+Additional Features:
 Check for updates to ensure you are using the latest version of the tool.
 
 
